@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  mailer-api:
+    build: .
+    container_name: ${DOMAIN}
+    restart: always
+    ports:
+      - "${PORT}:${PORT}"
+    command: "npm run start"
